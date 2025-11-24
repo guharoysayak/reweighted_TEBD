@@ -386,52 +386,7 @@ class MPDO:
             temp = np.tensordot(temp,self.A_dict["A"+str(i)][:,0,:],axes=1)
         temp = temp.flatten()[0]
         self.tr_TEBD = temp
-        
-#        if _sqtrace == True:
- #           temp1 = np.einsum('iaj,kal->ikjl',self.A_dict["A0"][:,:1,:],self.A_dict["A0"][:,:1,:],optimize='optimal')
-  #          temp2 = np.einsum('iaj,kal->ikjl',(1/2)*g*self.A_dict["A0"][:,1:,:],(1/2)*g*self.A_dict["A0"][:,1:,:],optimize='optimal')
-   #         temp = temp1 + temp2
-    #        for i in range(1,self.L):
-     #           temp = np.einsum('ikjl,jbm->ikmbl',temp,self.A_dict["A"+str(i)],optimize='optimal')
-      #          temp1 = np.einsum('ikmbl,lbn->ikmn',temp[:,:,:,:1,:],self.A_dict["A"+str(i)][:,:1,:],optimize='optimal')
-       #         temp2 = np.einsum('ikmbl,lbn->ikmn',g*temp[:,:,:,1:,:],g*self.A_dict["A"+str(i)][:,1:,:],optimize='optimal')
-        #        temp = temp1 + temp2
-         #   self.sq_trace = (1/2**self.L)*temp.flatten()[0]
-          #  self.norm_trace = self.tr_TEBD/np.sqrt(self.sq_trace)
-           # self.renyi_full = -np.log2(self.sq_trace/(self.tr_TEBD)**2)
-        
-#        if _renyi == True:
-            # Renyi entropy left
- #           temp1 = np.einsum('iaj,kal->ikjl',self.A_dict["A0"][:,:1,:],self.A_dict["A0"][:,:1,:],optimize='optimal')
-  #          temp2 = np.einsum('iaj,kal->ikjl',g*self.A_dict["A0"][:,1:,:],g*self.A_dict["A0"][:,1:,:],optimize='optimal')
-   #         temp = temp1 + temp2
-    #        for i in range(1,int(self.L/2)):
-     #           temp = np.einsum('ikjl,jbm->ikmbl',temp,self.A_dict["A"+str(i)],optimize='optimal')
-      #          temp1 = np.einsum('ikmbl,lbn->ikmn',temp[:,:,:,:1,:],self.A_dict["A"+str(i)][:,:1,:],optimize='optimal')
-       #         temp2 = np.einsum('ikmbl,lbn->ikmn',g*temp[:,:,:,1:,:],g*self.A_dict["A"+str(i)][:,1:,:],optimize='optimal')
-        #        temp = temp1 + temp2
-         #   for i in range(int(self.L/2),self.L):
-          #      temp1 = np.einsum('ikjl,jm->ikml',temp,self.A_dict["A"+str(i)][:,0,:],optimize='optimal')
-           #     temp = np.einsum('ikml,ln->ikmn',temp1,self.A_dict["A"+str(i)][:,0,:],optimize='optimal')
-           # left_trace_sq = (1/2**(self.L/2))*temp.flatten()[0]
-           # self.renyi_left = -np.log2(left_trace_sq/(self.tr_TEBD**2))
-        
-            # Renyi entropy right
-#            temp1 = np.einsum('iaj,kal->ikjl',self.A_dict["A"+str(self.L-1)][:,:1,:],self.A_dict["A"+str(self.L-1)][:,:1,:],optimize='optimal')
- #           temp2 = np.einsum('iaj,kal->ikjl',g*self.A_dict["A"+str(self.L-1)][:,1:,:],g*self.A_dict["A"+str(self.L-1)][:,1:,:],optimize='optimal')
-  #          temp = temp1 + temp2
-   #         loop1 = np.arange(self.L-2,(int(self.L/2))-1,-1)
-    #        for i in loop1:
-     #           temp = np.einsum('mbi,ikjl->mbkjl',self.A_dict["A"+str(i)],temp,optimize='optimal')
-      #          temp1 = np.einsum('nbk,mbkjl->mnjl',self.A_dict["A"+str(i)][:,:1,:],temp[:,:1,:,:,:],optimize='optimal')
-       #         temp2 = np.einsum('nbk,mbkjl->mnjl',g*self.A_dict["A"+str(i)][:,1:,:],g*temp[:,1:,:,:,:],optimize='optimal')
-        #        temp = temp1 + temp2
-         #   loop2 = np.arange((int(self.L/2))-1,-1,-1)
-          #  for i in loop2:
-           #     temp1 = np.einsum('ai,ikjl->akjl',self.A_dict["A"+str(i)][:,0,:],temp,optimize='optimal')
-            #    temp = np.einsum('bk,akjl->abjl',self.A_dict["A"+str(i)][:,0,:],temp1,optimize='optimal')
-           # right_trace_sq = (1/2**(self.L/2))*temp.flatten()[0]
-           # self.renyi_right = -np.log2(right_trace_sq/(self.tr_TEBD**2))
+    
                 
         # Measure energy per site
         # Measure SzSz
