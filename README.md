@@ -1,7 +1,27 @@
 # reweighted_TEBD (rTEBD)
 
-Reweighted TEBD (rTEBD) is a new Matrix Product Density Operator based tensor network simulation technique for improved quantum dynamics simulations. In this repository, there are rTEBD codes for a fermionic and a spin model that are shown in https://arxiv.org/abs/2412.08730. According to the paper, the fermionic rTEBD code uses the fermionic scheme and the spin model rTEBD code uses the bosonic scheme. 
+Reweighted TEBD (rTEBD) is a Matrix Product Density Operator (MPDO) based tensor-network method for improved quantum dynamics simulations.
+This repo contains the reference implementations used in https://arxiv.org/abs/2412.08730.
 
-The relevant parameters in the rTEBD code are the bond dimension ($\chi), the system size ($L$), total simulation time in units of $J$ ($T$), total number of time steps ($N$) which gives the Trotter step ($\delta t$), and the parameter $\gamma$ (g) as defined in the paper. For g = 1, this code is usual MPDO based TEBD code and for any other value of g > 1, this is an rTEBD code.
+**Zenodo DOI:** 10.5281/zenodo.17479681
 
-DOI for this code release: 10.5281/zenodo.17479681
+---
+
+## Repository layout
+
+- `rtebd/` — importable Python package (library + CLI entrypoints)
+- `scripts/` — standalone scripts used to generate paper figures (do not depend on `rtebd/`)
+- `params_fermion.yaml` — example parameter file for a fermion run
+- `runs/` — (generated) output directory (created automatically; not tracked in git)
+
+---
+
+## Installation
+
+### Option A: editable install (recommended)
+```bash
+git clone https://github.com/guharoysayak/reweighted_TEBD.git
+cd reweighted_TEBD
+pip install -e .
+
+
