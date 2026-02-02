@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "created_at": "2026-02-01T18:41:38",
+    "git_commit": "3625aec964eb55f421a8ceb30b60d9616fc3e610",
+    "platform": "macOS-26.0.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.7"
+  },
+  "params": {
+    "J": 1.0,
+    "L": 6,
+    "N": 250,
+    "T": 20.0,
+    "chi": 1000,
+    "g": 1.5,
+    "k": 0.7853981633974483,
+    "outdir": "runs",
+    "renyi_cuts": false,
+    "schrodinger_check": true,
+    "sqtrace": true,
+    "tag": "fermion_test"
+  }
+}
