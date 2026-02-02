@@ -1,2 +1,0 @@
-Et_TEBD: shape=(250,), real[min,max]=(-1.89893e-14,1.87381e-14)
-trace: shape=(250,), real[min,max]=(1,1)
