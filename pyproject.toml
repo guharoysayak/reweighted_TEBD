@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rtebd"
+version = "0.0.0"
+description = "Minimal rTEBD/MPDO library (fermion reference)"
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rtebd*"]

@@ -1,0 +1,24 @@
+# --- system size ---
+L: 128
+chi: 16
+
+# --- time evolution ---
+T: 50.0
+N: 625
+
+# --- rTEBD reweighting ---
+g: 1.5
+
+# --- model parameters ---
+J: 1.0
+k: 0.7853981633974483   # pi/4
+
+# --- optional checks ---
+schrodinger_check: false
+renyi_cuts: false
+sqtrace: false
+
+# --- output ---
+outdir: runs
+tag: fermion_test
+
