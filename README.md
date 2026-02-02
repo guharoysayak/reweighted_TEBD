@@ -8,7 +8,17 @@ https://arxiv.org/abs/2412.08730
 If you use this code, please cite the above paper.
 
 Zenodo DOI:
-https://doi.org/10.5281/zenodo.17479681
+[https://doi.org/10.5281/zenodo.17479681](https://doi.org/10.5281/zenodo.18452771)
+
+## Development status
+
+The `rtebd` package is under active development.
+
+At present, the packaged implementation supports **fermionic models**. Support for additional models (e.g. spin and bosonic systems) will be added in future releases.
+
+The code is written in a modular way: users can define **custom initial states**, **Hamiltonians**, and **time-evolution gates**, and run them within the same rTEBD framework by extending the relevant modules.
+
+The **spin-model implementation used in the paper** is provided in the `scripts/` directory as a standalone reference and is not yet integrated into the `rtebd` package.
 
 ---
 
@@ -159,7 +169,7 @@ runs/     → reproducible outputs (parameters + metadata + results)
 
 Zenodo:
 ```text
-https://doi.org/10.5281/zenodo.17479681
+[https://doi.org/10.5281/zenodo.17479681](https://doi.org/10.5281/zenodo.17479681)
 ```
 
 ---
