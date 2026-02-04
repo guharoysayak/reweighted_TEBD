@@ -166,16 +166,3 @@ runs/     → reproducible outputs (parameters + metadata + results)
       url={https://arxiv.org/abs/2412.08730}, 
 }
 ```
-
-Zenodo:
-```text
-[https://doi.org/10.5281/zenodo.17479681](https://doi.org/10.5281/zenodo.17479681)
-```
-
----
-
-## License
-
-```text
-See LICENSE
-```
