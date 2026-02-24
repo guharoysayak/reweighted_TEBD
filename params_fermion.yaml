@@ -11,6 +11,8 @@ g: 1.5
 
 # --- model parameters ---
 J: 1.0
+
+# --- k for computing fourier transform ---
 k: 0.7853981633974483   # pi/4
 
 # --- optional checks ---
