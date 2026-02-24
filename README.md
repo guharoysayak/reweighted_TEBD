@@ -122,7 +122,7 @@ chi                MPDO bond dimension
 T                  total evolution time
 N                  number of Trotter steps (dt = T / N)
 g                  reweighting parameter (g = 1 → standard MPDO-TEBD)
-J, k               model parameters
+J                  model parameters
 
 schrodinger_check  exact Schrödinger evolution (small systems only)
 renyi_cuts         Rényi entropy across bipartitions
